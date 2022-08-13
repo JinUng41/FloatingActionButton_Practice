@@ -19,7 +19,10 @@ class TodoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        titleLabel.delegate = self
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.titleLabel.resignFirstResponder()
     }
 
     @IBAction func changeTodoDate(_ sender: UIDatePicker) {
@@ -37,5 +40,12 @@ class TodoViewController: UIViewController {
         print(todoTitle)
         // 모달 닫는 동작
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension TodoViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        titleLabel.endEditing(true)
+        return true
     }
 }

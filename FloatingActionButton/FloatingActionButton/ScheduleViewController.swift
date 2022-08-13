@@ -23,6 +23,13 @@ class ScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         oneHourPlus()
+        titleLabel.delegate = self
+        memoLabel.delegate = self
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.titleLabel.resignFirstResponder()
+        self.memoLabel.resignFirstResponder()
     }
     
     private func oneHourPlus() {
@@ -57,4 +64,12 @@ class ScheduleViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension ScheduleViewController:UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        titleLabel.endEditing(true)
+        memoLabel.endEditing(true)
+        return true
+    }
 }
