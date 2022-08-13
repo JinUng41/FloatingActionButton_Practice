@@ -16,29 +16,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3q-tX-Iec">
-                                <rect key="frame" x="145" y="442.5" width="124.5" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8Wi-az-oNs">
+                                <rect key="frame" x="20" y="64.5" width="40" height="39"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="7t9-vX-YHH"/>
+                                    <constraint firstAttribute="height" constant="40" id="oIi-QC-Bjr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="equ-8c-1qj">
+                                <rect key="frame" x="70" y="64" width="61" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="U9i-fz-aWG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목 추가" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q2K-rR-vGn">
+                                <rect key="frame" x="20" y="124" width="374" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시작 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wb-tG-VKW">
+                                <rect key="frame" x="20" y="189.5" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yyyy-MM-dd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1W-qM-kW0">
+                                <rect key="frame" x="70" y="189.5" width="99.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q8T-pe-7eS">
+                                <rect key="frame" x="20" y="235" width="374" height="216"/>
+                                <connections>
+                                    <action selector="changeDatePicker:" destination="Y6W-OH-hqX" eventType="valueChanged" id="GBM-BN-Ltc"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="e3q-tX-Iec" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="AST-Tw-9hq"/>
-                            <constraint firstItem="e3q-tX-Iec" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="ld9-u3-hN4"/>
+                            <constraint firstItem="8Wi-az-oNs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="1IN-c1-i2F"/>
+                            <constraint firstItem="q2K-rR-vGn" firstAttribute="top" secondItem="equ-8c-1qj" secondAttribute="bottom" constant="20" id="5tF-Xj-zoJ"/>
+                            <constraint firstItem="0wb-tG-VKW" firstAttribute="top" secondItem="q2K-rR-vGn" secondAttribute="bottom" constant="20" id="8V5-Sd-yyj"/>
+                            <constraint firstItem="A1W-qM-kW0" firstAttribute="top" secondItem="0wb-tG-VKW" secondAttribute="top" id="Cdc-1p-Uc1"/>
+                            <constraint firstItem="Q8T-pe-7eS" firstAttribute="leading" secondItem="0wb-tG-VKW" secondAttribute="leading" id="Cxu-wB-CUz"/>
+                            <constraint firstItem="equ-8c-1qj" firstAttribute="top" secondItem="8Wi-az-oNs" secondAttribute="top" id="KaE-Hd-5R9"/>
+                            <constraint firstItem="equ-8c-1qj" firstAttribute="leading" secondItem="8Wi-az-oNs" secondAttribute="trailing" constant="10" id="OSK-8M-KPu"/>
+                            <constraint firstItem="0wb-tG-VKW" firstAttribute="leading" secondItem="q2K-rR-vGn" secondAttribute="leading" id="VQl-l4-LXM"/>
+                            <constraint firstItem="Q8T-pe-7eS" firstAttribute="top" secondItem="0wb-tG-VKW" secondAttribute="bottom" constant="24.5" id="dvx-GW-Dco"/>
+                            <constraint firstItem="8Wi-az-oNs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="ffg-29-PYC"/>
+                            <constraint firstItem="Q8T-pe-7eS" firstAttribute="trailing" secondItem="q2K-rR-vGn" secondAttribute="trailing" id="lJT-YL-SKb"/>
+                            <constraint firstItem="A1W-qM-kW0" firstAttribute="leading" secondItem="0wb-tG-VKW" secondAttribute="trailing" constant="7" id="xbm-uK-bVk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="q2K-rR-vGn" secondAttribute="trailing" constant="20" id="xlQ-0E-IOU"/>
+                            <constraint firstItem="q2K-rR-vGn" firstAttribute="leading" secondItem="8Wi-az-oNs" secondAttribute="leading" id="zBy-Mn-MkB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startDateLabel" destination="A1W-qM-kW0" id="c9N-lW-ZVj"/>
+                        <outlet property="titleLabel" destination="q2K-rR-vGn" id="jXR-2H-nHz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="110"/>
+            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="calendar.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
