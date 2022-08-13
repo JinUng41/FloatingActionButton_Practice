@@ -9,21 +9,48 @@ import UIKit
 
 class DiaryViewController: UIViewController {
 
+    @IBOutlet weak var applyButton: UIButton!
+    
+    @IBOutlet weak var diaryTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        diaryTextViewStyle()
+        diaryTextView.delegate = self
+    }
+    private func diaryTextViewStyle() {
+        diaryTextView.layer.borderWidth = 3.0
+        diaryTextView.layer.cornerRadius = 10
+        diaryTextView.layer.borderColor = UIColor.lightGray.cgColor
+        diaryTextView.text =  " 일기 추가"
+        diaryTextView.textColor = UIColor.lightGray
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.diaryTextView.resignFirstResponder()
+        }
+    
+    @IBAction func applyButtonPressed(_ sender: Any) {
+        
+        self.dismiss(animated: true)
     }
-    */
+}
+
+extension DiaryViewController: UITextViewDelegate {
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+            if diaryTextView.text.isEmpty {
+                diaryTextView.text = " 일기 추가"
+                diaryTextView.textColor = UIColor.lightGray
+            }
+
+        }
+    func textViewDidBeginEditing(_ textView: UITextView) {
+            if diaryTextView.textColor == UIColor.lightGray {
+                diaryTextView.text = nil
+                diaryTextView.textColor = UIColor.label
+            }
+        }
 
 }
