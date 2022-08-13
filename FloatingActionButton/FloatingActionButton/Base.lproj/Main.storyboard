@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,72 +17,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hVJ-Uf-Un9">
-                                <rect key="frame" x="295" y="715" width="75" height="75"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ZCb-vM-RKj">
+                                <rect key="frame" x="300" y="705" width="50" height="75"/>
                                 <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmR-H3-0U9">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOp-eE-eHe">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="2dn-py-t9V"/>
-                                            <constraint firstAttribute="height" constant="75" id="kPJ-np-T3p"/>
+                                            <constraint firstAttribute="width" constant="50" id="wbw-77-STH"/>
+                                            <constraint firstAttribute="width" secondItem="AOp-eE-eHe" secondAttribute="height" multiplier="1:1" id="z81-Nq-OrF"/>
                                         </constraints>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="sun.min.fill" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="calendar.circle.fill" catalog="system" renderingMode="template"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RX2-SL-1zk">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKw-Gl-VWF">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="BYj-13-iCE"/>
-                                            <constraint firstAttribute="height" constant="75" id="ZcO-BS-ZWg"/>
+                                            <constraint firstAttribute="width" constant="50" id="8os-JQ-X8f"/>
+                                            <constraint firstAttribute="width" secondItem="rKw-Gl-VWF" secondAttribute="height" multiplier="1:1" id="uO7-8d-rIU"/>
                                         </constraints>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="cloud.fill" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40" scale="default"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="checkmark.circle.fill" catalog="system" renderingMode="template"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkY-cw-6qc">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiV-f0-bdo">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="PMa-hv-MLi"/>
-                                            <constraint firstAttribute="height" constant="75" id="cH0-Op-gjo"/>
+                                            <constraint firstAttribute="width" secondItem="FiV-f0-bdo" secondAttribute="height" multiplier="1:1" id="Con-km-aWj"/>
+                                            <constraint firstAttribute="width" constant="50" id="Hde-AX-fxp"/>
                                         </constraints>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="cloud.rain.fill" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="pencil.circle.fill" catalog="system" renderingMode="template"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPm-Na-bIf">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="eEx-Xo-BEP"/>
-                                            <constraint firstAttribute="height" constant="75" id="vvM-X7-PLQ"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqk-uc-GaP">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="75"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="plus.circle" catalog="system" title="">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="plus.circle.fill" catalog="system" renderingMode="template"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="floatingButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bR3-Ya-WB9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="cjm-ge-iEo"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hVJ-Uf-Un9" secondAttribute="trailing" constant="20" id="E04-mo-xya"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hVJ-Uf-Un9" secondAttribute="bottom" constant="20" id="Os2-9Z-GTZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZCb-vM-RKj" secondAttribute="bottom" constant="30" id="Nok-he-kzJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZCb-vM-RKj" secondAttribute="trailing" constant="40" id="XU7-zM-CHF"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonView" destination="hVJ-Uf-Un9" id="uPJ-w6-9Gx"/>
-                        <outlet property="firstButton" destination="VmR-H3-0U9" id="wmR-u7-gfK"/>
-                        <outlet property="plusButton" destination="GPm-Na-bIf" id="f6L-im-qPn"/>
-                        <outlet property="secondButton" destination="RX2-SL-1zk" id="wpZ-h7-4tf"/>
-                        <outlet property="thirdButton" destination="MkY-cw-6qc" id="m9T-ZN-dwq"/>
+                        <outlet property="diaryButton" destination="FiV-f0-bdo" id="2Rh-qu-6Dn"/>
+                        <outlet property="floatingButton" destination="uqk-uc-GaP" id="17r-3x-zwD"/>
+                        <outlet property="floatingStackView" destination="ZCb-vM-RKj" id="RPT-dT-rmU"/>
+                        <outlet property="scheduleButton" destination="AOp-eE-eHe" id="Id5-Wh-x1k"/>
+                        <outlet property="todoButton" destination="rKw-Gl-VWF" id="oNd-Kf-XBQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,12 +95,21 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cloud.fill" catalog="system" width="128" height="88"/>
-        <image name="cloud.rain.fill" catalog="system" width="125" height="128"/>
-        <image name="plus.circle" catalog="system" width="128" height="121"/>
-        <image name="sun.min.fill" catalog="system" width="128" height="121"/>
+        <image name="calendar.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

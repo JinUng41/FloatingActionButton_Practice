@@ -1,32 +1,81 @@
-//
-//  ViewController.swift
-//  FloatingActionButton
-//
-//  Created by 김진웅 on 2022/08/11.
-//
 
 import UIKit
 
 class ViewController: UIViewController {
-    
-    // 스택뷰와 버튼 뷰컨트롤러에 연결
-    @IBOutlet weak var buttonView: UIStackView!
-    @IBOutlet weak var firstButton: UIButton!
-    @IBOutlet weak var secondButton: UIButton!
-    @IBOutlet weak var thirdButton: UIButton!
-    @IBOutlet weak var plusButton: UIButton!
-    
-    // hidden 속성으로 숨겨둔 버튼 배열로 저장
-    lazy var buttons: [UIButton] = [self.firstButton, self.secondButton, self.thirdButton]
-    
-    var isShowFlag: Bool = false
 
+    @IBOutlet weak var floatingStackView: UIStackView!
+    @IBOutlet weak var floatingButton: UIButton!
+    @IBOutlet weak var scheduleButton: UIButton!
+    @IBOutlet weak var todoButton: UIButton!
+    @IBOutlet weak var diaryButton: UIButton!
+    
+    // show 상태일 때, 배경 어둡게 처리
+    lazy var floatingDimView: UIView = {
+        let view = UIView(frame: self.view.frame)
+        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        view.alpha = 0
+        view.isHidden = true
+        
+        self.view.insertSubview(view, belowSubview: self.floatingStackView)
+        
+        return view
+    }()
+    
+    // 플로팅 상태에 대한 flag
+    var isShowFloating: Bool = false
+    
+    // 버튼 배열
+    lazy var buttons: [UIButton] = [self.scheduleButton, self.todoButton, self.diaryButton]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
     }
+    
+    // 플로팅 버튼이 눌렸을 때 동작하는 함수
+    @IBAction func floatingButtonAction(_ sender: UIButton) {
+        
+        if isShowFloating {
+            // hide 애니메이션
+            buttons.reversed().forEach { button in
+                UIView.animate(withDuration: 0.3) {
+                    button.isHidden = true
+                    self.view.layoutIfNeeded()
+                }
+            }
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                self.floatingDimView.alpha = 0
+            }) { (_) in
+                self.floatingDimView.isHidden = true
+            }
+        } else {
+         
+            self.floatingDimView.isHidden = false
+            
+            UIView.animate(withDuration: 0.5) {
+                self.floatingDimView.alpha = 1
+            }
+            // show 애니메이션
+            buttons.forEach { [weak self] button in
+                button.isHidden = false
+                button.alpha = 0
 
-
+                UIView.animate(withDuration: 0.3) {
+                    button.alpha = 1
+                    self?.view.layoutIfNeeded()
+                }
+            }
+        }
+        
+        // 상태 flag 값 변경
+        isShowFloating = !isShowFloating
+        
+        // 이미지 회전
+        let rotation = isShowFloating ? CGAffineTransform(rotationAngle: .pi - (.pi / 4)) : CGAffineTransform.identity
+        
+        UIView.animate(withDuration: 0.3) {
+            // 이미지 회전
+            sender.transform = rotation
+        }
+    }
 }
-
