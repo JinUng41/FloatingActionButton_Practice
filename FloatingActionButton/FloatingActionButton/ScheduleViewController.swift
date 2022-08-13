@@ -8,21 +8,33 @@
 import UIKit
 
 class ScheduleViewController: UIViewController {
-
+    
     @IBOutlet weak var titleLabel: UITextField!
     
-    @IBOutlet weak var startDateLabel: UILabel!
+    private var startDate: String!
+    private var exitDate: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
-        
-    @IBAction func changeDatePicker(_ sender: UIDatePicker) {
+    
+    
+    @IBAction func changeStartDate(_ sender: UIDatePicker) {
         let datePickerView = sender
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyy-MM-dd HH:mm EEE"
-        startDateLabel.text = formatter.string(from: datePickerView.date)
+        formatter.dateFormat = "yyyy-MM-dd HH:mm EEE"
+        formatter.locale = Locale(identifier: "ko_KR")
+        startDate = formatter.string(from: datePickerView.date)
+        print(">>> 시작 날짜 : " + startDate)
     }
+    
+    @IBAction func changeExitDate(_ sender: UIDatePicker) {
+        let datePickerView = sender
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm EEE"
+        formatter.locale = Locale(identifier: "ko_KR")
+        exitDate = formatter.string(from: datePickerView.date)
+        print(">>> 종료 날짜 : " + exitDate)
+    }
+    
 }
