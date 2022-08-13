@@ -78,4 +78,27 @@ class ViewController: UIViewController {
             sender.transform = rotation
         }
     }
+    
+    // schedule 버튼이 눌렸을 때
+    @IBAction func scheduleButtonAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Schedule", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ScheduleViewController") as! ScheduleViewController
+        present(vc, animated: true)
+    }
+    
+    // todo 버튼이 눌렸을 때
+    @IBAction func todoButtonAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Todo", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "TodoViewController") as! TodoViewController
+        present(vc, animated: true)
+    }
+    
+    // diary 버튼이 눌렸을 때
+    @IBAction func diaryButtonAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Diary", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DiaryViewController") as! DiaryViewController
+        present(vc, animated: true)
+    }
+    
+    
 }

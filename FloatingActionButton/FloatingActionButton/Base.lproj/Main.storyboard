@@ -32,6 +32,9 @@
                                             <imageReference key="image" image="calendar.circle.fill" catalog="system" renderingMode="template"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="scheduleButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdU-8a-dHs"/>
+                                        </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKw-Gl-VWF">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -45,6 +48,9 @@
                                             <imageReference key="image" image="checkmark.circle.fill" catalog="system" renderingMode="template"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="todoButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V8t-V3-Fpv"/>
+                                        </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiV-f0-bdo">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -58,10 +64,13 @@
                                             <imageReference key="image" image="pencil.circle.fill" catalog="system" renderingMode="template"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="diaryButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RwL-1T-rsw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqk-uc-GaP">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="75"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <imageReference key="image" image="plus.circle.fill" catalog="system" renderingMode="template"/>
@@ -99,6 +108,9 @@
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

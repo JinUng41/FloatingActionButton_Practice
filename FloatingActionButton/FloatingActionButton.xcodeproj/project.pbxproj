@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE87C78D28A7A2A80004A63D /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE87C78C28A7A2A80004A63D /* Schedule.storyboard */; };
+		DE87C78F28A7A2F20004A63D /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87C78E28A7A2F20004A63D /* ScheduleViewController.swift */; };
+		DE87C79128A7A70C0004A63D /* Todo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE87C79028A7A70C0004A63D /* Todo.storyboard */; };
+		DE87C79328A7A7690004A63D /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87C79228A7A7690004A63D /* TodoViewController.swift */; };
+		DE87C79528A7A8450004A63D /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE87C79428A7A8450004A63D /* Diary.storyboard */; };
+		DE87C79728A7A8500004A63D /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87C79628A7A8500004A63D /* DiaryViewController.swift */; };
 		DEB0163528A53D380014C4B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB0163428A53D380014C4B0 /* AppDelegate.swift */; };
 		DEB0163728A53D380014C4B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB0163628A53D380014C4B0 /* SceneDelegate.swift */; };
 		DEB0163928A53D380014C4B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB0163828A53D380014C4B0 /* ViewController.swift */; };
@@ -36,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE87C78C28A7A2A80004A63D /* Schedule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
+		DE87C78E28A7A2F20004A63D /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		DE87C79028A7A70C0004A63D /* Todo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Todo.storyboard; sourceTree = "<group>"; };
+		DE87C79228A7A7690004A63D /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
+		DE87C79428A7A8450004A63D /* Diary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
+		DE87C79628A7A8500004A63D /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		DEB0163128A53D380014C4B0 /* FloatingActionButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatingActionButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB0163428A53D380014C4B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB0163628A53D380014C4B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +115,12 @@
 				DEB0163628A53D380014C4B0 /* SceneDelegate.swift */,
 				DEB0163828A53D380014C4B0 /* ViewController.swift */,
 				DEB0163A28A53D380014C4B0 /* Main.storyboard */,
+				DE87C78E28A7A2F20004A63D /* ScheduleViewController.swift */,
+				DE87C78C28A7A2A80004A63D /* Schedule.storyboard */,
+				DE87C79228A7A7690004A63D /* TodoViewController.swift */,
+				DE87C79028A7A70C0004A63D /* Todo.storyboard */,
+				DE87C79628A7A8500004A63D /* DiaryViewController.swift */,
+				DE87C79428A7A8450004A63D /* Diary.storyboard */,
 				DEB0163D28A53D390014C4B0 /* Assets.xcassets */,
 				DEB0163F28A53D390014C4B0 /* LaunchScreen.storyboard */,
 				DEB0164228A53D390014C4B0 /* Info.plist */,
@@ -232,8 +250,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEB0164128A53D390014C4B0 /* LaunchScreen.storyboard in Resources */,
+				DE87C79128A7A70C0004A63D /* Todo.storyboard in Resources */,
+				DE87C79528A7A8450004A63D /* Diary.storyboard in Resources */,
 				DEB0163E28A53D390014C4B0 /* Assets.xcassets in Resources */,
 				DEB0163C28A53D380014C4B0 /* Main.storyboard in Resources */,
+				DE87C78D28A7A2A80004A63D /* Schedule.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE87C79328A7A7690004A63D /* TodoViewController.swift in Sources */,
 				DEB0163928A53D380014C4B0 /* ViewController.swift in Sources */,
 				DEB0163528A53D380014C4B0 /* AppDelegate.swift in Sources */,
 				DEB0163728A53D380014C4B0 /* SceneDelegate.swift in Sources */,
+				DE87C79728A7A8500004A63D /* DiaryViewController.swift in Sources */,
+				DE87C78F28A7A2F20004A63D /* ScheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
