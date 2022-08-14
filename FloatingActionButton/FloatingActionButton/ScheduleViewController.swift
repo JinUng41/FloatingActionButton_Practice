@@ -27,11 +27,13 @@ class ScheduleViewController: UIViewController {
         memoLabel.delegate = self
     }
     
+    // 입력이 끝나고 화면 빈 곳을 터치했을 때 키보드가 사라지게끔..
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.titleLabel.resignFirstResponder()
         self.memoLabel.resignFirstResponder()
     }
     
+    // 기본 종료 시간을 현재 시간에서 한시간 후로 설정하기 위해..
     private func oneHourPlus() {
         exitDatePicker.date = Date()+3600
     }
@@ -66,6 +68,7 @@ class ScheduleViewController: UIViewController {
     
 }
 
+// 키보드에서 done이 눌렸을 때 키보드가 사라지게 함
 extension ScheduleViewController:UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         titleLabel.endEditing(true)

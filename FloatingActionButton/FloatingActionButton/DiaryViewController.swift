@@ -19,29 +19,34 @@ class DiaryViewController: UIViewController {
         diaryTextViewStyle()
         diaryTextView.delegate = self
     }
+    
+    // diaryTextView 스타일 지정
     private func diaryTextViewStyle() {
         diaryTextView.layer.borderWidth = 3.0
         diaryTextView.layer.cornerRadius = 10
         diaryTextView.layer.borderColor = UIColor.lightGray.cgColor
-        diaryTextView.text =  " 일기 추가"
+        diaryTextView.text =  " 오늘의 일기"
         diaryTextView.textColor = UIColor.lightGray
     }
     
+    // 빈 화면을 터치했을 때 키보드가 사라지게끔..
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             self.diaryTextView.resignFirstResponder()
         }
     
+    // 저장 버튼을 눌렀을 때, 모달이 사라지면서 정보를 저장
     @IBAction func applyButtonPressed(_ sender: Any) {
         
         self.dismiss(animated: true)
     }
 }
 
+// textview의 placeholder 지정, 글씨를 입력하면 원래 글씨 색으로 출력
 extension DiaryViewController: UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
             if diaryTextView.text.isEmpty {
-                diaryTextView.text = " 일기 추가"
+                diaryTextView.text = " 오늘의 일기"
                 diaryTextView.textColor = UIColor.lightGray
             }
 
