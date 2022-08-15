@@ -9,10 +9,10 @@ import UIKit
 
 class ScheduleViewController: UIViewController {
     
-    @IBOutlet weak var titleLabel: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var applyButton: UIButton!
     
-    @IBOutlet weak var memoLabel: UITextField!
+    @IBOutlet weak var memoTextField: UITextField!
     
     @IBOutlet weak var exitDatePicker: UIDatePicker!
     
@@ -23,14 +23,14 @@ class ScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         oneHourPlus()
-        titleLabel.delegate = self
-        memoLabel.delegate = self
+        titleTextField.delegate = self
+        memoTextField.delegate = self
     }
     
     // 입력이 끝나고 화면 빈 곳을 터치했을 때 키보드가 사라지게끔..
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.titleLabel.resignFirstResponder()
-        self.memoLabel.resignFirstResponder()
+        self.titleTextField.resignFirstResponder()
+        self.memoTextField.resignFirstResponder()
     }
     
     // 기본 종료 시간을 현재 시간에서 한시간 후로 설정하기 위해..
@@ -43,7 +43,7 @@ class ScheduleViewController: UIViewController {
         let datePickerView = sender
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm EEE"
-        formatter.locale = Locale(identifier: "ko_KR")
+//        formatter.locale = Locale(identifier: "ko_KR")
         startDate = formatter.string(from: datePickerView.date)
         print(">>> 시작 날짜 : " + startDate)
     }
@@ -53,14 +53,14 @@ class ScheduleViewController: UIViewController {
         let datePickerView = sender
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm EEE"
-        formatter.locale = Locale(identifier: "ko_KR")
+//        formatter.locale = Locale(identifier: "ko_KR")
         exitDate = formatter.string(from: datePickerView.date)
         print(">>> 종료 날짜 : " + exitDate)
     }
     
     @IBAction func applyButtonPressed(_ sender: Any) {
         
-        scheduleTitle = titleLabel.text
+        scheduleTitle = titleTextField.text
         print(scheduleTitle)
         // 모달 닫는 동작
         self.dismiss(animated: true, completion: nil)
@@ -68,11 +68,17 @@ class ScheduleViewController: UIViewController {
     
 }
 
-// 키보드에서 done이 눌렸을 때 키보드가 사라지게 함
+
 extension ScheduleViewController:UITextFieldDelegate {
+    // 자동적으로 키보드가 올라오게끔
+    override func viewWillAppear(_ animated: Bool) {
+        self.titleTextField.becomeFirstResponder()
+    }
+    
+    // 키보드에서 done이 눌렸을 때 키보드가 사라지게 함
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        titleLabel.endEditing(true)
-        memoLabel.endEditing(true)
+        titleTextField.endEditing(true)
+        memoTextField.endEditing(true)
         return true
     }
 }

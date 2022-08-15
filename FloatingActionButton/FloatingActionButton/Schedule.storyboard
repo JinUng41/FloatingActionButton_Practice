@@ -51,49 +51,62 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시작 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wb-tG-VKW">
-                                <rect key="frame" x="20" y="205.5" width="49.5" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Brt-mw-mip"/>
-                                </constraints>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ajY-1V-HKU">
+                                <rect key="frame" x="20" y="205.5" width="374" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="VZt-fD-R0N">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시작 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9A-3K-RRh">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="YAL-UT-bA3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="GRW-bx-xN0">
+                                                <rect key="frame" x="74" y="0.0" width="300" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="QsZ-L3-PMe"/>
+                                                    <constraint firstAttribute="height" constant="30" id="tap-89-eUP"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="changeStartDate:" destination="Y6W-OH-hqX" eventType="valueChanged" id="1b5-pJ-aFj"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZl-Lu-qeA">
+                                        <rect key="frame" x="0.0" y="40" width="374" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="종료 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMj-uf-tYv">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="YQz-aO-t0c"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Vfg-VI-HIj">
+                                                <rect key="frame" x="74" y="0.0" width="300" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="V7m-hj-eKS"/>
+                                                    <constraint firstAttribute="height" constant="30" id="aud-2W-sIw"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="changeStartDate:" destination="Y6W-OH-hqX" eventType="valueChanged" id="Wlm-Yb-E7a"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" 메모 추가" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I7x-HK-Qyg">
+                                <rect key="frame" x="20" y="305.5" width="374" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Q8T-pe-7eS">
-                                <rect key="frame" x="69.5" y="205.5" width="225" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="TPt-aG-GxK"/>
-                                    <constraint firstAttribute="width" constant="225" id="eiN-x1-2jJ"/>
-                                </constraints>
-                                <locale key="locale" localeIdentifier="ko"/>
-                                <connections>
-                                    <action selector="changeStartDate:" destination="Y6W-OH-hqX" eventType="valueChanged" id="Mws-RG-Zdr"/>
-                                </connections>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="종료 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGe-ZB-5uE" userLabel="종료 :">
-                                <rect key="frame" x="20" y="245.5" width="50" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="6Wc-e0-1gR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Zfz-Pi-9FS">
-                                <rect key="frame" x="70" y="245.5" width="225" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="FQd-jE-2gz"/>
-                                    <constraint firstAttribute="width" constant="225" id="mbm-gT-68a"/>
-                                </constraints>
-                                <locale key="locale" localeIdentifier="ko"/>
-                                <connections>
-                                    <action selector="changeExitDate:" destination="Y6W-OH-hqX" eventType="valueChanged" id="LoA-Sd-rZg"/>
-                                </connections>
-                            </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" 메모" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OOa-cg-PCb">
-                                <rect key="frame" x="20" y="305.5" width="374" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                         </subviews>
@@ -102,31 +115,26 @@
                         <constraints>
                             <constraint firstItem="8Wi-az-oNs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="1IN-c1-i2F"/>
                             <constraint firstItem="q2K-rR-vGn" firstAttribute="top" secondItem="equ-8c-1qj" secondAttribute="bottom" constant="30" id="5tF-Xj-zoJ"/>
+                            <constraint firstItem="ajY-1V-HKU" firstAttribute="trailing" secondItem="q2K-rR-vGn" secondAttribute="trailing" id="62M-xO-rFi"/>
                             <constraint firstItem="Ssb-Qa-mPI" firstAttribute="top" secondItem="8Wi-az-oNs" secondAttribute="top" id="6ET-qj-qBh"/>
-                            <constraint firstItem="0wb-tG-VKW" firstAttribute="top" secondItem="q2K-rR-vGn" secondAttribute="bottom" constant="30" id="8V5-Sd-yyj"/>
-                            <constraint firstItem="aGe-ZB-5uE" firstAttribute="top" secondItem="0wb-tG-VKW" secondAttribute="bottom" constant="10" id="EoP-Bu-3j9"/>
                             <constraint firstItem="equ-8c-1qj" firstAttribute="top" secondItem="8Wi-az-oNs" secondAttribute="top" id="KaE-Hd-5R9"/>
+                            <constraint firstItem="I7x-HK-Qyg" firstAttribute="top" secondItem="ajY-1V-HKU" secondAttribute="bottom" constant="30" id="Lap-A1-G9k"/>
                             <constraint firstItem="equ-8c-1qj" firstAttribute="leading" secondItem="8Wi-az-oNs" secondAttribute="trailing" constant="10" id="OSK-8M-KPu"/>
-                            <constraint firstItem="OOa-cg-PCb" firstAttribute="trailing" secondItem="q2K-rR-vGn" secondAttribute="trailing" id="RGA-TJ-ug2"/>
-                            <constraint firstItem="Zfz-Pi-9FS" firstAttribute="leading" secondItem="aGe-ZB-5uE" secondAttribute="trailing" id="Tnj-tb-a7F"/>
-                            <constraint firstItem="aGe-ZB-5uE" firstAttribute="leading" secondItem="0wb-tG-VKW" secondAttribute="leading" id="Udo-cN-MDU"/>
-                            <constraint firstItem="0wb-tG-VKW" firstAttribute="leading" secondItem="q2K-rR-vGn" secondAttribute="leading" id="VQl-l4-LXM"/>
-                            <constraint firstItem="Q8T-pe-7eS" firstAttribute="leading" secondItem="0wb-tG-VKW" secondAttribute="trailing" id="fZn-2E-87l"/>
                             <constraint firstItem="8Wi-az-oNs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="ffg-29-PYC"/>
-                            <constraint firstItem="OOa-cg-PCb" firstAttribute="leading" secondItem="aGe-ZB-5uE" secondAttribute="leading" id="mjc-hG-eqH"/>
-                            <constraint firstItem="Q8T-pe-7eS" firstAttribute="top" secondItem="0wb-tG-VKW" secondAttribute="top" id="rEy-Bf-2OI"/>
+                            <constraint firstItem="I7x-HK-Qyg" firstAttribute="leading" secondItem="ajY-1V-HKU" secondAttribute="leading" id="kId-su-OiS"/>
+                            <constraint firstItem="ajY-1V-HKU" firstAttribute="top" secondItem="q2K-rR-vGn" secondAttribute="bottom" constant="30" id="peU-Lf-g2z"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ssb-Qa-mPI" secondAttribute="trailing" constant="20" id="srT-oq-Wjk"/>
-                            <constraint firstItem="OOa-cg-PCb" firstAttribute="top" secondItem="aGe-ZB-5uE" secondAttribute="bottom" constant="30" id="vMM-2R-iwr"/>
+                            <constraint firstItem="ajY-1V-HKU" firstAttribute="leading" secondItem="q2K-rR-vGn" secondAttribute="leading" id="toE-bG-0lo"/>
+                            <constraint firstItem="I7x-HK-Qyg" firstAttribute="trailing" secondItem="ajY-1V-HKU" secondAttribute="trailing" id="wIa-Lu-uvf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="q2K-rR-vGn" secondAttribute="trailing" constant="20" id="xlQ-0E-IOU"/>
-                            <constraint firstItem="Zfz-Pi-9FS" firstAttribute="top" secondItem="aGe-ZB-5uE" secondAttribute="top" id="yJ5-PI-PX7"/>
                             <constraint firstItem="q2K-rR-vGn" firstAttribute="leading" secondItem="8Wi-az-oNs" secondAttribute="leading" id="zBy-Mn-MkB"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="applyButton" destination="Ssb-Qa-mPI" id="guP-B8-DcK"/>
-                        <outlet property="exitDatePicker" destination="Zfz-Pi-9FS" id="TYN-ec-xBK"/>
-                        <outlet property="memoLabel" destination="OOa-cg-PCb" id="ng2-lh-Pj7"/>
-                        <outlet property="titleLabel" destination="q2K-rR-vGn" id="BZa-qN-Mfl"/>
+                        <outlet property="exitDatePicker" destination="Vfg-VI-HIj" id="FAy-WF-A14"/>
+                        <outlet property="memoTextField" destination="I7x-HK-Qyg" id="jbg-th-EGb"/>
+                        <outlet property="titleTextField" destination="q2K-rR-vGn" id="kO7-RQ-WGv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

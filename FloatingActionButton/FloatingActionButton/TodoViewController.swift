@@ -10,7 +10,7 @@ import UIKit
 class TodoViewController: UIViewController {
 
     @IBOutlet weak var applyButton: UIButton! // 저장 버튼
-    @IBOutlet weak var titleLabel: UITextField! // 할 일 제목
+    @IBOutlet weak var titleTextField: UITextField! // 할 일 제목
     @IBOutlet weak var todoDatePicker: UIDatePicker! // 할 일 datePicker
     
     private var todoTitle: String!
@@ -20,12 +20,12 @@ class TodoViewController: UIViewController {
         super.viewDidLoad()
         
         // UITextField를 다루기 위해
-        titleLabel.delegate = self
+        titleTextField.delegate = self
     }
     
     // 입력이 끝나고 화면 빈 곳을 터치했을 때 키보드가 사라지게끔..
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.titleLabel.resignFirstResponder()
+        self.titleTextField.resignFirstResponder()
     }
     
     // datepicker를 이용해 날짜를 지정하기
@@ -41,7 +41,7 @@ class TodoViewController: UIViewController {
     // 저장 버튼을 눌렀을 때
     @IBAction func applyButtonPressed(_ sender: Any) {
         
-        todoTitle = (titleLabel.text)
+        todoTitle = (titleTextField.text)
         print(todoTitle)
         // 모달 닫는 동작
         self.dismiss(animated: true, completion: nil)
@@ -50,8 +50,12 @@ class TodoViewController: UIViewController {
 
 // 키보드에서 done이 눌렸을 때, 키보드가 사라지게끔 한다.
 extension TodoViewController: UITextFieldDelegate {
+    override func viewWillAppear(_ animated: Bool) {
+        self.titleTextField.becomeFirstResponder()
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        titleLabel.endEditing(true)
+        titleTextField.endEditing(true)
         return true
     }
 }

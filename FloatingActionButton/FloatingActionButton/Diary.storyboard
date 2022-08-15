@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="DiaryViewController" id="Y6W-OH-hqX" customClass="DiaryViewController" customModule="FloatingActionButton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZiM-eh-7Jl">
-                                <rect key="frame" x="20" y="74.5" width="40" height="39"/>
+                                <rect key="frame" x="20" y="75" width="40" height="38.666666666666671"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Nnf-zg-poY"/>
@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhF-qX-EkF">
-                                <rect key="frame" x="345.5" y="74" width="48.5" height="59"/>
+                                <rect key="frame" x="321.66666666666669" y="74" width="48.333333333333314" height="59"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="저장" imagePadding="10">
@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Al-Ae-DVs">
-                                <rect key="frame" x="20" y="144" width="374" height="200"/>
+                                <rect key="frame" x="20" y="144" width="350" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Ihe-qn-Nc2"/>
@@ -56,23 +56,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q2I-cm-FKj">
-                                <rect key="frame" x="132" y="403.5" width="150" height="99"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="ZQF-RA-fNg"/>
-                                    <constraint firstAttribute="height" constant="100" id="fgq-6q-6Za"/>
-                                </constraints>
-                                <imageReference key="image" image="smiley.fill" catalog="system" renderingMode="template"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4Al-Ae-DVs" firstAttribute="top" secondItem="ZiM-eh-7Jl" secondAttribute="bottom" constant="30" id="4cV-ly-WEc"/>
                             <constraint firstItem="iMz-N5-nD6" firstAttribute="top" secondItem="ZiM-eh-7Jl" secondAttribute="top" id="6ZU-5j-LiQ"/>
-                            <constraint firstItem="q2I-cm-FKj" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="EWo-3B-XL8"/>
-                            <constraint firstItem="q2I-cm-FKj" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="GZI-rk-r1p"/>
                             <constraint firstItem="4Al-Ae-DVs" firstAttribute="trailing" secondItem="qhF-qX-EkF" secondAttribute="trailing" id="HI9-Bo-Bt5"/>
                             <constraint firstItem="ZiM-eh-7Jl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="JfZ-qv-Z1J"/>
                             <constraint firstItem="ZiM-eh-7Jl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="MLk-om-nqC"/>
@@ -95,7 +84,6 @@
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="smiley.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
