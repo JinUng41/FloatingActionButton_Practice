@@ -71,8 +71,78 @@
                                     </datePicker>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6U-bl-Uee">
+                                <rect key="frame" x="160" y="204" width="70" height="77"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="smiley.fill" catalog="system" imagePlacement="top" title="좋아" imagePadding="10">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="selectEmoButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="53e-fk-eCr"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lEe-0D-z1v">
+                                <rect key="frame" x="20" y="291" width="350" height="0.0"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTr-y2-G48">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="77"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="smiley.fill" catalog="system" imagePlacement="top" title="좋아" imagePadding="10">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="happyTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2AG-Kx-Trp"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFj-aZ-VMN">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="77"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="smiley.fill" catalog="system" imagePlacement="top" title="평온" imagePadding="10">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="normalTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NTm-v1-hrA"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgZ-7B-LvE">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="77"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="smiley.fill" catalog="system" imagePlacement="top" title="피곤" imagePadding="10">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tiredTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MgP-pw-cSa"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYq-Ra-Gqt">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="77"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="smiley.fill" catalog="system" imagePlacement="top" title="짜증" imagePadding="10">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="annoyTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jHE-Ce-kku"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdH-VG-0Ko">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="77"/>
+                                        <color key="tintColor" systemColor="systemBlueColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="smiley.fill" catalog="system" imagePlacement="top" title="슬퍼" imagePadding="10">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sadTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="os9-RP-4Bn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Al-Ae-DVs">
-                                <rect key="frame" x="20" y="304" width="350" height="200"/>
+                                <rect key="frame" x="20" y="310" width="350" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Ihe-qn-Nc2"/>
@@ -87,22 +157,36 @@
                         <constraints>
                             <constraint firstItem="4Al-Ae-DVs" firstAttribute="trailing" secondItem="uec-Uy-11g" secondAttribute="trailing" id="0M5-0H-v8C"/>
                             <constraint firstItem="iMz-N5-nD6" firstAttribute="top" secondItem="ZiM-eh-7Jl" secondAttribute="top" id="6ZU-5j-LiQ"/>
-                            <constraint firstItem="4Al-Ae-DVs" firstAttribute="top" secondItem="uec-Uy-11g" secondAttribute="bottom" constant="130" id="FRf-Yw-b3k"/>
+                            <constraint firstItem="lEe-0D-z1v" firstAttribute="trailing" secondItem="uec-Uy-11g" secondAttribute="trailing" id="74y-uP-8dS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="4Al-Ae-DVs" secondAttribute="bottom" constant="300" id="8cp-Ua-Ec9"/>
+                            <constraint firstItem="m6U-bl-Uee" firstAttribute="top" secondItem="uec-Uy-11g" secondAttribute="bottom" constant="30" id="AdI-Pn-8H4"/>
                             <constraint firstItem="ZiM-eh-7Jl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="JfZ-qv-Z1J"/>
                             <constraint firstItem="uec-Uy-11g" firstAttribute="trailing" secondItem="qhF-qX-EkF" secondAttribute="trailing" id="K7h-oc-zY6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="m6U-bl-Uee" secondAttribute="trailing" constant="160" id="Kdd-lv-Ydc"/>
                             <constraint firstItem="uec-Uy-11g" firstAttribute="leading" secondItem="ZiM-eh-7Jl" secondAttribute="leading" id="M9S-Aw-uJm"/>
                             <constraint firstItem="ZiM-eh-7Jl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="MLk-om-nqC"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qhF-qX-EkF" secondAttribute="trailing" constant="20" id="S54-pq-0VH"/>
                             <constraint firstItem="iMz-N5-nD6" firstAttribute="leading" secondItem="ZiM-eh-7Jl" secondAttribute="trailing" constant="10" id="UK9-1f-1Ms"/>
+                            <constraint firstItem="lEe-0D-z1v" firstAttribute="top" secondItem="m6U-bl-Uee" secondAttribute="bottom" constant="10" id="V72-4N-cwQ"/>
+                            <constraint firstItem="lEe-0D-z1v" firstAttribute="leading" secondItem="uec-Uy-11g" secondAttribute="leading" id="Y4I-Er-jCe"/>
                             <constraint firstItem="4Al-Ae-DVs" firstAttribute="leading" secondItem="uec-Uy-11g" secondAttribute="leading" id="iC9-V6-4XU"/>
                             <constraint firstItem="qhF-qX-EkF" firstAttribute="top" secondItem="ZiM-eh-7Jl" secondAttribute="top" id="ryB-0e-IGg"/>
+                            <constraint firstItem="m6U-bl-Uee" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="160" id="tjJ-xc-Byp"/>
                             <constraint firstItem="uec-Uy-11g" firstAttribute="top" secondItem="ZiM-eh-7Jl" secondAttribute="bottom" constant="30" id="yTi-ow-QBM"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="annoyButton" destination="DYq-Ra-Gqt" id="kZK-wG-DcA"/>
                         <outlet property="applyButton" destination="qhF-qX-EkF" id="dIN-Pr-1Yn"/>
+                        <outlet property="currentView" destination="5EZ-qb-Rvc" id="qnL-kn-Itb"/>
                         <outlet property="diaryDatePicker" destination="qAr-am-hVX" id="a45-RU-Mbc"/>
                         <outlet property="diaryTextView" destination="4Al-Ae-DVs" id="JBJ-vm-BiD"/>
+                        <outlet property="emotionStackView" destination="lEe-0D-z1v" id="l6c-tQ-jX9"/>
+                        <outlet property="happyButton" destination="yTr-y2-G48" id="rcG-xP-TWb"/>
+                        <outlet property="normalButton" destination="oFj-aZ-VMN" id="5l5-xM-2fs"/>
+                        <outlet property="sadButton" destination="MdH-VG-0Ko" id="nVg-Yk-NuT"/>
+                        <outlet property="selectEmoButton" destination="m6U-bl-Uee" id="8Ya-Vd-HL9"/>
+                        <outlet property="tiredButton" destination="kgZ-7B-LvE" id="OJK-es-gcL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -113,14 +197,24 @@
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="smiley.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
