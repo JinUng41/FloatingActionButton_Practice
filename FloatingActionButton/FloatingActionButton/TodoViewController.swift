@@ -35,7 +35,7 @@ class TodoViewController: UIViewController {
         formatter.dateFormat = "yyyy-MM-dd EEE"
         formatter.locale = Locale(identifier: "ko_KR")
         todoDate = formatter.string(from: datePickerView.date)
-        print(">>> 날짜 : " + todoDate)
+        print(">>> 할 일 날짜 : \(todoDate)")
     }
     
     // 저장 버튼을 눌렀을 때

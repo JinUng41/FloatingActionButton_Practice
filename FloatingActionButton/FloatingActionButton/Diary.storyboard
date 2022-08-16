@@ -26,7 +26,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMz-N5-nD6">
-                                <rect key="frame" x="70" y="74" width="61" height="40"/>
+                                <rect key="frame" x="70" y="74" width="60.666666666666657" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jud-Bo-D1U"/>
                                 </constraints>
@@ -46,8 +46,33 @@
                                     <action selector="applyButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JiO-wA-hp9"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="uec-Uy-11g">
+                                <rect key="frame" x="20" y="144" width="350" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87i-Z4-uOy">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="jag-gy-wcq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="qAr-am-hVX">
+                                        <rect key="frame" x="250" y="0.0" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="X0m-2F-4NX"/>
+                                            <constraint firstAttribute="height" constant="30" id="dX5-DL-KcS"/>
+                                        </constraints>
+                                        <locale key="locale" localeIdentifier="ko"/>
+                                        <connections>
+                                            <action selector="changeDiaryDate:" destination="Y6W-OH-hqX" eventType="valueChanged" id="E0k-tf-8q9"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Al-Ae-DVs">
-                                <rect key="frame" x="20" y="144" width="350" height="200"/>
+                                <rect key="frame" x="20" y="304" width="350" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Ihe-qn-Nc2"/>
@@ -60,19 +85,23 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4Al-Ae-DVs" firstAttribute="top" secondItem="ZiM-eh-7Jl" secondAttribute="bottom" constant="30" id="4cV-ly-WEc"/>
+                            <constraint firstItem="4Al-Ae-DVs" firstAttribute="trailing" secondItem="uec-Uy-11g" secondAttribute="trailing" id="0M5-0H-v8C"/>
                             <constraint firstItem="iMz-N5-nD6" firstAttribute="top" secondItem="ZiM-eh-7Jl" secondAttribute="top" id="6ZU-5j-LiQ"/>
-                            <constraint firstItem="4Al-Ae-DVs" firstAttribute="trailing" secondItem="qhF-qX-EkF" secondAttribute="trailing" id="HI9-Bo-Bt5"/>
+                            <constraint firstItem="4Al-Ae-DVs" firstAttribute="top" secondItem="uec-Uy-11g" secondAttribute="bottom" constant="130" id="FRf-Yw-b3k"/>
                             <constraint firstItem="ZiM-eh-7Jl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="JfZ-qv-Z1J"/>
+                            <constraint firstItem="uec-Uy-11g" firstAttribute="trailing" secondItem="qhF-qX-EkF" secondAttribute="trailing" id="K7h-oc-zY6"/>
+                            <constraint firstItem="uec-Uy-11g" firstAttribute="leading" secondItem="ZiM-eh-7Jl" secondAttribute="leading" id="M9S-Aw-uJm"/>
                             <constraint firstItem="ZiM-eh-7Jl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="MLk-om-nqC"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qhF-qX-EkF" secondAttribute="trailing" constant="20" id="S54-pq-0VH"/>
                             <constraint firstItem="iMz-N5-nD6" firstAttribute="leading" secondItem="ZiM-eh-7Jl" secondAttribute="trailing" constant="10" id="UK9-1f-1Ms"/>
-                            <constraint firstItem="4Al-Ae-DVs" firstAttribute="leading" secondItem="ZiM-eh-7Jl" secondAttribute="leading" id="UcS-GQ-4Zx"/>
+                            <constraint firstItem="4Al-Ae-DVs" firstAttribute="leading" secondItem="uec-Uy-11g" secondAttribute="leading" id="iC9-V6-4XU"/>
                             <constraint firstItem="qhF-qX-EkF" firstAttribute="top" secondItem="ZiM-eh-7Jl" secondAttribute="top" id="ryB-0e-IGg"/>
+                            <constraint firstItem="uec-Uy-11g" firstAttribute="top" secondItem="ZiM-eh-7Jl" secondAttribute="bottom" constant="30" id="yTi-ow-QBM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="applyButton" destination="qhF-qX-EkF" id="dIN-Pr-1Yn"/>
+                        <outlet property="diaryDatePicker" destination="qAr-am-hVX" id="a45-RU-Mbc"/>
                         <outlet property="diaryTextView" destination="4Al-Ae-DVs" id="JBJ-vm-BiD"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,10 @@ class DiaryViewController: UIViewController {
     
     @IBOutlet weak var diaryTextView: UITextView!
     
+    @IBOutlet weak var diaryDatePicker: UIDatePicker!
+    
+    private var diaryDate: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +38,15 @@ class DiaryViewController: UIViewController {
             self.diaryTextView.resignFirstResponder()
         }
     
+    // 일기 날짜 바꾸기
+    @IBAction func changeDiaryDate(_ sender: UIDatePicker) {
+        let datePickerView = sender
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd EEE"
+        formatter.locale = Locale(identifier: "ko_KR")
+        diaryDate = formatter.string(from: datePickerView.date)
+        print(">>> 일기 날짜 : \(diaryDate)")
+    }
     // 저장 버튼을 눌렀을 때, 모달이 사라지면서 정보를 저장
     @IBAction func applyButtonPressed(_ sender: Any) {
         
