@@ -29,6 +29,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        floatingStackViewStyle()
+    }
+    // 플로팅스택뷰 스타일 지정
+    private func floatingStackViewStyle() {
+        floatingStackView.layer.cornerRadius = 45
+        floatingStackView.backgroundColor = .white
     }
     
     // 플로팅 버튼이 눌렸을 때 동작하는 함수

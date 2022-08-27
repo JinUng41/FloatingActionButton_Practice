@@ -56,7 +56,7 @@ class DiaryViewController: UIViewController {
     
     // diaryTextView 스타일 지정
     private func diaryTextViewStyle() {
-        diaryTextView.layer.borderWidth = 3.0
+        diaryTextView.layer.borderWidth = 0.5
         diaryTextView.layer.cornerRadius = 10
         diaryTextView.layer.borderColor = UIColor.lightGray.cgColor
         diaryTextView.text =  " 오늘의 일기"
@@ -65,8 +65,8 @@ class DiaryViewController: UIViewController {
     
     // 빈 화면을 터치했을 때 키보드가 사라지게끔..
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            self.diaryTextView.resignFirstResponder()
-        }
+        self.diaryTextView.resignFirstResponder()
+    }
     
     // 일기 날짜 바꾸기
     @IBAction func changeDiaryDate(_ sender: UIDatePicker) {
@@ -86,6 +86,8 @@ class DiaryViewController: UIViewController {
     // emotionStackView의 스타일 지정
     private func emotionStackViewStyle() {
         emotionStackView.layer.cornerRadius = 30
+//        emotionStackView.layer.borderWidth = 3.0
+        emotionStackView.layer.borderColor = UIColor.lightGray.cgColor
         emotionStackView.backgroundColor = .white
     }
     // 이모션 버튼이 눌렸을 때, 다시 스택 뷰가 닫히도록

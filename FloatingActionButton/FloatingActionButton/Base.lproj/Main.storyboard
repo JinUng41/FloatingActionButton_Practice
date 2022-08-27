@@ -17,15 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ZCb-vM-RKj">
-                                <rect key="frame" x="300" y="705" width="50" height="75"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZCb-vM-RKj">
+                                <rect key="frame" x="271" y="705" width="99" height="75"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOp-eE-eHe">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="wbw-77-STH"/>
-                                            <constraint firstAttribute="width" secondItem="AOp-eE-eHe" secondAttribute="height" multiplier="1:1" id="z81-Nq-OrF"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="0.0"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="일정" imagePadding="10">
@@ -38,11 +34,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKw-Gl-VWF">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="8os-JQ-X8f"/>
-                                            <constraint firstAttribute="width" secondItem="rKw-Gl-VWF" secondAttribute="height" multiplier="1:1" id="uO7-8d-rIU"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="0.0"/>
                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="할 일" imagePadding="10">
@@ -55,11 +47,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiV-f0-bdo">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="FiV-f0-bdo" secondAttribute="height" multiplier="1:1" id="Con-km-aWj"/>
-                                            <constraint firstAttribute="width" constant="50" id="Hde-AX-fxp"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="0.0"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="일기" imagePadding="10">
@@ -72,7 +60,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqk-uc-GaP">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="75"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
@@ -90,7 +78,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZCb-vM-RKj" secondAttribute="bottom" constant="30" id="Nok-he-kzJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZCb-vM-RKj" secondAttribute="trailing" constant="40" id="XU7-zM-CHF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZCb-vM-RKj" secondAttribute="trailing" constant="20" id="XU7-zM-CHF"/>
                         </constraints>
                     </view>
                     <connections>
